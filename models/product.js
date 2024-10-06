@@ -48,15 +48,6 @@ const productSchema = new mongoose.Schema({
 });
 
 
-// productSchema.post('findOneAndDelete' , async function(product){
-//     if(product.reviews.length > 0){
-//         await Review.deleteMany({_id:{$in:product.reviews}})
-//     }
-// })
-
-// model/collection -> JS class -> object/document
-//model -> sigular & capital letter
-
 let Product = mongoose.model('Product' , productSchema);
 
 module.exports = Product;

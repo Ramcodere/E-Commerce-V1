@@ -1,7 +1,3 @@
-
-
-
-
 const express = require ('express'); 
 const Product = require('../models/product');
 const Review = require('../models/review');
@@ -14,7 +10,6 @@ router.post('/products/:productId/review' , isLoggedIn , validateRivew, async(re
             let {productId} = req.params;
             let {rating , comment} = req.body;
             const product = await Product.findById(productId);
-            // console.log(product);
             // creating a new review
             const review  = new Review({rating , comment}); // let review  = new Review({...req.body}) 
             

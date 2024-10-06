@@ -13,7 +13,6 @@ router.get("/user/cart", isLoggedIn, async (req, res) => {
   let user = await User.findById(userId).populate("cart");
 
   let totalAmount = user.cart.reduce((sum, curr) => sum + curr.price, 0);
-  //   console.log(totalAmount);
 
   res.render("cart/cart", { user, totalAmount });
 });
@@ -64,18 +63,6 @@ router.get('/payment/:id',async(req,res)=>{
         res.redirect(303, session.url);
     });
     
-//     // Define success route
-// router.get('/success', (req, res) => {
-//   // Display success message to the user
-//   res.render('success', { title: 'Payment Success' });
-// });
-
-// // Define cancel route
-// router.get('/cancel', (req, res) => {
-//   // Display cancel message to the user
-//   res.render('cancel', { title: 'Payment Cancelled' });
-// });
-
 
 
 module.exports = router;

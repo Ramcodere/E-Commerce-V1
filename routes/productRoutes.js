@@ -1,6 +1,5 @@
 
 const express =  require('express');
-// const Joi = require('joi');
 const Product = require('../models/product');
 const router = express.Router();
 const {validateProduct , isLoggedIn, isSeller, isProductAuthor} =  require('../middleware');
@@ -75,26 +74,6 @@ router.get('/products/:id/edit' , isLoggedIn , isSeller , async (req,res)=>{
         res.status(500).render('error' , {err:e.message});
     }
 })
-
-// router.get("/", (req,res) => {
-//     res.render("Home");
-// });
-
-// route for editing the product so we need form for it
-// router.get('/products/:id/edit', isLoggedIn, isSeller, async (req, res) => {
-//     try {
-//         let { id } = req.params;
-//         let foundProduct = await Product.findById(id);
-//         if (!foundProduct) {
-//             req.flash('error', 'Product not found');
-//             return res.redirect('/products');
-//         }
-//         res.render('edit', { foundProduct });
-//     } catch (e) {
-//         res.status(500).render('error', { err: e.message });
-//     }
-// })
-
 
 
 

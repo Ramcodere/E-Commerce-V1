@@ -19,8 +19,7 @@ const reviewSchema = new mongoose.Schema({
 } , { timestamps: true }) 
 
 
-// model/collection -> JS class -> object/document
-//model -> sigular & capital letter
+
 
 let Review = mongoose.model('Review' , reviewSchema);
 

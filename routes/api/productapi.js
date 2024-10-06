@@ -1,6 +1,4 @@
 
-
-
 const express = require ('express'); 
 const { isLoggedIn } = require('../../middleware');
 const User = require ('../../models/User'); 
