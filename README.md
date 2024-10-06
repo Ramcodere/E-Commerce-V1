@@ -5,12 +5,7 @@
 - [Features](#features)
 - [Technologies Used](#technologies-used)
 - [Installation](#installation)
-- [Usage](#usage)
-- [API Endpoints](#api-endpoints)
-- [Testing](#testing)
-- [Contributing](#contributing)
-- [License](#license)
-- [Acknowledgements](#acknowledgements)
+
 
 ## Description
 This E-commerce web application provides a platform for users to browse and purchase a variety of products. It features a clean and intuitive interface designed to enhance the shopping experience. Users can register, log in, and manage their shopping carts efficiently.
